@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saqlain Danish .NET Full Stack Developer portfolio.">
+  <title>Saqlain Danish | .NET Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "Segoe UI", "Arial", "sans-serif"]
+          },
+          colors: {
+            ink: "#07111f",
+            cloud: "#f7fbff",
+            electric: "#4f46e5",
+            aqua: "#06b6d4",
+            mint: "#14b8a6",
+            ember: "#f59e0b"
+          },
+          boxShadow: {
+            glow: "0 24px 80px rgba(6, 182, 212, 0.22)",
+            indigoglow: "0 18px 55px rgba(79, 70, 229, 0.26)"
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body class="bg-cloud text-slate-800 antialiased transition-colors duration-500 dark:bg-ink dark:text-slate-100">
+  <div id="preloader" class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950">
+    <div class="preloader-card">
+      <div class="loader-ring" aria-hidden="true"></div>
+      <div class="mt-5 text-center">
+        <p class="text-sm font-semibold tracking-[0.28em] text-cyan-200">Saqlain Dnaish</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.24em] text-slate-500">Loading portfolio</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-shell">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+  </div>
+
+  <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-6">
+    <nav id="navbar"
+      class="mx-auto max-w-7xl rounded-2xl border border-white/15 bg-white/70 shadow-xl shadow-slate-950/5 backdrop-blur-2xl transition-all duration-300 dark:border-white/10 dark:bg-slate-950/60 dark:shadow-black/20">
+      <div class="flex h-16 items-center justify-between px-4 sm:px-6">
+        <a href="#home" class="group flex items-center gap-3" aria-label="Mostfa Hassan home">
+          <span
+            class="relative grid h-11 w-11 place-items-center overflow-hidden rounded-xl bg-slate-950 text-sm font-black text-white shadow-indigoglow dark:bg-white dark:text-slate-950">
+            <span
+              class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(6,182,212,.9),transparent_34%),radial-gradient(circle_at_80%_70%,rgba(79,70,229,.9),transparent_42%)] opacity-90"></span>
+            <img src="MyImg.jpg" class="relative bg-cover bg-center" alt="My Personal Photo">
+          </span>
+          <span class="leading-tight">
+            <span class="block text-sm font-bold text-slate-950 dark:text-white">Saqlain Danish</span>
+            <span class="block text-xs font-medium text-slate-500 dark:text-slate-400">.NET Full Stack Developer</span>
+          </span>
+        </a>
+
+        <div class="hidden items-center gap-1 lg:flex">
+          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#journey">Journey</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" class="icon-button ripple" type="button" aria-label="Switch to light mode"
+            title="Toggle theme">
+            <svg id="moonIcon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 14.4A8.7 8.7 0 0 1 9.6 3a7.7 7.7 0 1 0 11.4 11.4Z" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <svg id="sunIcon" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.7-5.7 1.4-1.4M4.9 19.1l1.4-1.4m0-11.4L4.9 4.9m14.2 14.2-1.4-1.4M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <button id="menuToggle" class="icon-button ripple lg:hidden" type="button" aria-label="Open navigation menu"
+            aria-expanded="false">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="hidden border-t border-slate-200/80 px-4 py-4 dark:border-white/10 lg:hidden">
+        <a class="mobile-link" href="#home">Home</a>
+        <a class="mobile-link" href="#about">About</a>
+        <a class="mobile-link" href="#skills">Skills</a>
+        <a class="mobile-link" href="#projects">Projects</a>
+        <a class="mobile-link" href="#journey">Journey</a>
+        <a class="mobile-link" href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="relative flex min-h-screen items-center overflow-hidden px-2 pb-20 pt-32 md:px-6">
+      <canvas id="heroCanvas" class="absolute inset-0 z-0 h-full w-full" aria-hidden="true"></canvas>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="floating-shape shape-one" data-parallax data-speed="0.05"></div>
+      <div class="floating-shape shape-two" data-parallax data-speed="0.08"></div>
+      <div class="floating-shape shape-three" data-parallax data-speed="0.035"></div>
+
+      <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
+        <div class="max-w-3xl">
+          <div
+            class="reveal inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-slate-600 shadow-lg shadow-slate-900/5 backdrop-blur dark:border-white/10 dark:bg-white/5 dark:text-cyan-200"
+            data-reveal>
+            <span class="h-2 w-2 rounded-full bg-mint shadow-[0_0_20px_rgba(20,184,166,.9)]"></span>
+            Available for junior .NET roles
+          </div>
+
+          <h1
+            class="reveal mt-7 max-w-4xl text-5xl font-black leading-[0.96] tracking-normal text-slate-950 sm:text-6xl lg:text-7xl dark:text-white"
+            data-reveal>
+            Saqlain Danish
+            <span class="block bg-gradient-to-r from-electric via-aqua to-mint bg-clip-text pt-2 text-transparent">Full
+              Stack .NET Developer</span>
+          </h1>
+
+          <p class="reveal mt-7 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300" data-reveal>
+            I build clean, scalable full-stack web applications using C#, ASP.NET Core MVC, and SQL Server — and I use
+            AI tools like GitHub Copilot to build them smarter and faster.
+          </p>
+
+          <div class="reveal mt-9 flex flex-col gap-4 sm:flex-row" data-reveal>
+            <a href="#projects" class="btn-primary ripple">View Projects</a>
+            <a href="#contact" class="btn-secondary ripple">Contact Me</a>
+            <a href="" class="btn-primary ripple" onclick="openURL()">Resume</a>
+          </div>
+
+          <div class="reveal mt-10 grid max-w-xl grid-cols-3 gap-3" data-reveal>
+            <div class="stat-tile">
+              <span class="stat-value">2</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-tile">
+              <span class="stat-value">.NET</span>
+              <span class="stat-label">Focus</span>
+            </div>
+            <div class="stat-tile">
+              <span class="stat-value">SQL</span>
+              <span class="stat-label">Data</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal relative mx-auto w-full max-w-xl lg:ml-auto" data-reveal>
+          <div class="profile-visual">
+            <div class="terminal-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="code-window">
+              <div
+                class="flex items-center justify-between border-b border-slate-200/80 px-5 py-4 dark:border-white/10">
+                <span
+                  class="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">portfolio.cs</span>
+                <span
+                  class="rounded-full bg-emerald-500/12 px-3 py-1 text-xs font-bold text-emerald-600 dark:text-emerald-300">Ready</span>
+              </div>
+              <pre aria-label="Developer code sample"><code><span class="code-muted">public class</span> Developer
+{
+    <span class="code-key">Name</span> = <span class="code-string">"Saqlain Danish"</span>;
+    <span class="code-key">Role</span> = <span class="code-string">"Full Stack .NET"</span>;
+    <span class="code-key">Stack</span> = [<span class="code-string">"C#"</span>,<span class="code-string">"ASP.NET Core"</span>, <span class="code-string">"SQL"</span>,<span class="code-string">"EF Core"</span>,<span class="code-string">"LINQ"</span>];
+
+    <span class="code-muted">Task</span> Build() =&gt; CleanUi + SolidBackend;
+}</code></pre>
+            </div>
+            <div class="orbit orbit-one">C#</div>
+            <div class="orbit orbit-two">SQL</div>
+            <div class="orbit orbit-three">API</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-pad px-4 md:px-6">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid items-start gap-10 lg:grid-cols-[.8fr_1.2fr]">
+          <div class="reveal" data-reveal>
+            <p class="section-kicker">About Me</p>
+            <h2 class="section-title">A developer focused on practical, business-ready web apps.</h2>
+          </div>
+          <div class="reveal space-y-6" data-reveal>
+            <p class="text-lg leading-8 text-slate-600 dark:text-slate-300">
+              I'm a Software Engineering graduate passionate about building full-stack web applications.
+              My core stack is C#, ASP.NET Core MVC, Entity Framework Core, and SQL Server — and I've applied
+              these through real projects including a complete e-commerce platform as my Final Year Project and
+              a Task Manager app with a notification system.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="info-panel">
+                <span class="panel-label">Backend</span>
+                <p>
+                  C#, ASP.NET Core MVC, ASP.NET Core Web API, Entity Framework Core, LINQ, REST APIs
+                </p>
+              </div>
+              <div class="info-panel">
+                <span class="panel-label">Frontend</span>
+                <p>HTML5, CSS3, JavaScript, Bootstrap 5, JQuery</p>
+              </div>
+              <div class="info-panel">
+                <span class="panel-label">Database</span>
+                <p>
+                  Microsoft SQL Server, T-SQL, SSMS (SQL Server Management Studio)
+                </p>
+              </div>
+              <div class="info-panel">
+                <span class="panel-label">Tools & Devops</span>
+                <p>
+                  Visual Studio 2022/2026, VS Code, Git, GitHub, Postman, NuGet
+                </p>
+              </div>
+              <div class="info-panel">
+                <span class="panel-label">AI Tools</span>
+                <p>
+                  GitHub Copilot, Claude AI, ChatGPT
+                </p>
+              </div>
+              <div class="info-panel">
+                <span class="panel-label">Concepts</span>
+                <p>
+                  MVC Architecture, OOP, CRUD Operations, ASP.NET Identity / Authentication, Responsive Web Design,
+                  SDLC, Agile Basics
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-5 pt-2">
+              <div class="progress-item" data-level="88">
+                <div class="flex items-center justify-between"><span>C#</span><span>88%</span></div>
+                <div class="progress-track"><span></span></div>
+              </div>
+              <div class="progress-item" data-level="82">
+                <div class="flex items-center justify-between"><span>ASP.NET Core</span><span>82%</span></div>
+                <div class="progress-track"><span></span></div>
+              </div>
+              <div class="progress-item" data-level="78">
+                <div class="flex items-center justify-between"><span>SQL Server</span><span>78%</span></div>
+                <div class="progress-track"><span></span></div>
+              </div>
+              <div class="progress-item" data-level="78">
+                <div class="flex items-center justify-between"><span>Entity Framework Core</span><span>76%</span></div>
+                <div class="progress-track"><span></span></div>
+              </div>
+              <div class="progress-item" data-level="86">
+                <div class="flex items-center justify-between"><span>HTML, CSS</span><span>86%</span></div>
+                <div class="progress-track"><span></span></div>
+              </div>
+              <div class="progress-item" data-level="86">
+                <div class="flex items-center justify-between"><span>Bootstrap 5</span><span>80%</span></div>
+                <div class="progress-track"><span></span></div>
+              </div>
+              <div class="progress-item" data-level="86">
+                <div class="flex items-center justify-between"><span>Javascript</span><span>75%</span></div>
+                <div class="progress-track"><span></span></div>
+              </div>
+              <div class="progress-item" data-level="80">
+                <div class="flex items-center justify-between"><span>Git & GitHub</span><span>80%</span></div>
+                <div class="progress-track"><span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section-pad px-4 md:px-6">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal mx-auto max-w-3xl text-center" data-reveal>
+          <p class="section-kicker justify-center">Skills</p>
+          <h2 class="section-title">The stack I use to design, build, and ship.</h2>
+        </div>
+
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="skill-card reveal" data-reveal>
+            <div class="skill-icon">C#</div>
+            <h3>C#</h3>
+            <p>Object-oriented programming, LINQ, async workflows, and clean application logic.</p>
+          </article>
+          <article class="skill-card reveal" data-reveal>
+            <div class="skill-icon">MVC</div>
+            <h3>ASP.NET MVC</h3>
+            <p>Controller actions, Razor views, model validation, routing, and structured UI flows.</p>
+          </article>
+          <article class="skill-card reveal" data-reveal>
+            <div class="skill-icon">API</div>
+            <h3>ASP.NET Core</h3>
+            <p>REST APIs, middleware, dependency injection, authentication, and service layers.</p>
+          </article>
+          <article class="skill-card reveal" data-reveal>
+            <div class="skill-icon">SQL</div>
+            <h3>SQL Server</h3>
+            <p>Relational schema design, joins, stored procedures, queries, and data integrity.</p>
+          </article>
+          <article class="skill-card reveal" data-reveal>
+            <div class="skill-icon">&lt;/&gt;</div>
+            <h3>HTML, CSS, JS</h3>
+            <p>Semantic markup, responsive CSS, DOM interactions, forms, and browser APIs.</p>
+          </article>
+          <article class="skill-card reveal" data-reveal>
+            <div class="skill-icon">BT</div>
+            <h3>Bootstrap</h3>
+            <p>Building responsive, modern, and user-friendly web interfaces</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section-pad px-4 md:px-6">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal flex flex-col justify-between gap-6 md:flex-row md:items-end" data-reveal>
+          <div class="max-w-3xl">
+            <p class="section-kicker">Projects</p>
+            <h2 class="section-title">Selected builds with real product thinking.</h2>
+          </div>
+          <a href="#contact" class="btn-secondary ripple w-fit">Start a Project</a>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="project-card reveal" data-reveal>
+            <div class="project-visual visual-one">
+              <span class="project-badge">E-Commerce</span>
+            </div>
+            <div class="project-content">
+              <h3>E-Commerce Web Application</h3>
+              <p>A fully functional multi-page e-commerce platform built as my Final Year Project.
+                Features include product catalog, shopping cart, order management, admin dashboard,
+                and user authentication with role-based access control (Admin/Customer).
+                Built with ASP.NET Core MVC, C#, SQL Server, and Entity Framework Core.</p>
+              <div class="tag-list">
+                <span>ASP.NET Core MVC</span>
+                <span>C#</span>
+                <span>SQL Server</span>
+                <span>EF Core</span>
+                <span>Bootstrap 5</span>
+                <span>ASP.NET Identity</span>
+              </div>
+              <div class="project-actions">
+                <!-- <a class="project-link ripple" href="#" aria-label="TransitNova live demo">Live Demo</a> -->
+                <a class="project-link project-link-muted ripple"
+                  href="https://github.com/saqlaindanish/ecommerce-web-app" target="_blank"
+                  aria-label="TransitNova GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal>
+            <div class="project-visual visual-two">
+              <span class="project-badge">SaaS</span>
+            </div>
+            <div class="project-content">
+              <h3>Task Manager Application</h3>
+              <p>A task management web app with full CRUD operations and a notification system
+                that alerts users of upcoming deadlines and task status changes. Users can create,
+                update, track, and delete tasks through a clean responsive interface.
+                Authentication ensures each user manages only their own tasks.</p>
+              <div class="tag-list">
+                <span>ASP.NET Core MVC</span>
+                <span>C#</span>
+                <span>SQL Server</span>
+                <span>EF Core</span>
+                <span>Bootstrap 5</span>
+                <span>ASP.NET Identity</span>
+              </div>
+              <div class="project-actions">
+                <!-- <a class="project-link ripple" href="#" aria-label="TaskFlow live demo">Live Demo</a> -->
+                <a class="project-link project-link-muted ripple" href="https://github.com/saqlaindanish/TaskManagerApp"
+                  target="_blank" aria-label="TaskFlow GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- <article class="project-card reveal" data-reveal>
+            <div class="project-visual visual-three">
+              <span class="project-badge">Commerce</span>
+            </div>
+            <div class="project-content">
+              <h3>E-Commerce Admin Dashboard</h3>
+              <p>Product, order, category, and customer management interface with analytics cards.</p>
+              <div class="tag-list"><span>ASP.NET</span><span>EF Core</span><span>SQL</span></div>
+              <div class="project-actions">
+                <a class="project-link ripple" href="#" aria-label="E-Commerce live demo">Live Demo</a>
+                <a class="project-link project-link-muted ripple" href="#" aria-label="E-Commerce GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal>
+            <div class="project-visual visual-four">
+              <span class="project-badge">Booking</span>
+            </div>
+            <div class="project-content">
+              <h3>Clinic Booking System</h3>
+              <p>Appointment scheduling system with doctors, patients, availability, and admin controls.</p>
+              <div class="tag-list"><span>MVC</span><span>Bootstrap</span><span>SQL Server</span></div>
+              <div class="project-actions">
+                <a class="project-link ripple" href="#" aria-label="Clinic Booking live demo">Live Demo</a>
+                <a class="project-link project-link-muted ripple" href="#" aria-label="Clinic Booking GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal>
+            <div class="project-visual visual-five">
+              <span class="project-badge">Content</span>
+            </div>
+            <div class="project-content">
+              <h3>Portfolio CMS</h3>
+              <p>Lightweight content management panel for projects, messages, blog posts, and media entries.</p>
+              <div class="tag-list"><span>ASP.NET Core</span><span>REST</span><span>Auth</span></div>
+              <div class="project-actions">
+                <a class="project-link ripple" href="#" aria-label="Portfolio CMS live demo">Live Demo</a>
+                <a class="project-link project-link-muted ripple" href="#" aria-label="Portfolio CMS GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal>
+            <div class="project-visual visual-six">
+              <span class="project-badge">API</span>
+            </div>
+            <div class="project-content">
+              <h3>Expense Tracker API</h3>
+              <p>Secure API for expenses, categories, monthly summaries, JWT auth, and SQL-backed reports.</p>
+              <div class="tag-list"><span>Web API</span><span>JWT</span><span>SQL</span></div>
+              <div class="project-actions">
+                <a class="project-link ripple" href="#" aria-label="Expense Tracker live demo">Live Demo</a>
+                <a class="project-link project-link-muted ripple" href="#"
+                  aria-label="Expense Tracker GitHub">GitHub</a>
+              </div>
+            </div>
+          </article> -->
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="section-pad px-4 md:px-6">
+      <div class="mx-auto max-w-7xl">
+        <div class="reveal mx-auto max-w-3xl text-center" data-reveal>
+          <p class="section-kicker justify-center">Journey</p>
+          <h2 class="section-title">A focused path into full-stack .NET development.</h2>
+        </div>
+
+        <div class="timeline mt-14">
+          <div class="timeline-line" aria-hidden="true"></div>
+          <article class="timeline-item reveal" data-reveal>
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span>2025 - Present</span>
+              <h3>Building production-style .NET projects</h3>
+              <p>Practicing real workflows: authentication, data modeling, layered architecture, dashboards, and
+                responsive interfaces.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-reveal>
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span>2024 - 2025</span>
+              <h3>Deepening ASP.NET Core and SQL Server</h3>
+              <p>Created CRUD systems, APIs, repository patterns, Identity-based auth, relational queries, and admin
+                features.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-reveal>
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span>2022 - 2024</span>
+              <h3>Frontend and web foundations</h3>
+              <p>
+                Built responsive pages with HTML, CSS, JavaScript, Bootstrap 5, Tailwind CSS, forms, animations, and
+                polished UI behavior.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-pad px-4 md:px-6">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.9fr_1.1fr]">
+        <div class="reveal" data-reveal>
+          <p class="section-kicker">Let's Contact</p>
+          <h2 class="section-title">Tell me about the project, role, or idea.</h2>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+            I am actively looking for Junior .NET Developer roles, internships, freelance tasks and entry-level Software
+            Engineering roles. Feel free to reach out — I'd love to talk.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a class="contact-pill ripple" href="https://github.com/saqlaindanish" aria-label="GitHub profile">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 5.29c1.02.01 2.05.14 3.01.41 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.47 5.92.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.28 0 .32.22.7.83.58A12.01 12.01 0 0 0 24 12c0-6.63-5.37-12-12-12Z" />
+              </svg>
+              GitHub
+            </a>
+            <a class="contact-pill ripple" href="https://linkedin.com/in/saqlain-danish" aria-label="LinkedIn profile">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M5.1 3.6a2.6 2.6 0 1 1-5.2 0 2.6 2.6 0 0 1 5.2 0ZM.4 8h4.4v14.2H.4V8Zm7.1 0h4.2v1.9h.1c.6-1.1 2-2.2 4.2-2.2 4.5 0 5.3 3 5.3 6.8v7.7h-4.4v-6.8c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6v6.9H7.5V8Z" />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" data-reveal novalidate action="https://api.web3forms.com/submit" method="POST"
+          id="contact-form">
+          <input type="hidden" name="access_key" value="2e68130c-e5e2-4740-b06c-ae119aa9564c">
+          <!-- Spam protection (required, keep hidden) -->
+          <input type="checkbox" name="botcheck" style="display:none">
+          <div>
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+            <p class="form-error" data-error-for="name"></p>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            <p class="form-error" data-error-for="email"></p>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell me what you want to build..."
+              required></textarea>
+            <p class="form-error" data-error-for="message"></p>
+          </div>
+          <button class="btn-primary ripple w-full justify-center" type="submit">Send Message</button>
+          <!-- Result message shown via JS -->
+          <div id="result"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200/80 px-4 py-9 dark:border-white/10 md:px-6">
+    <div
+      class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
+      <p class="text-sm font-medium text-slate-500 dark:text-slate-400">&copy; <span id="year"></span>Saqlain Danish.
+        Full Stack .NET Developer.</p>
+      <div class="flex items-center gap-4 text-sm font-semibold text-slate-500 dark:text-slate-400">
+        <a href="https://github.com/saqlaindanish" target="_blank" class="footer-link">GitHub</a>
+        <a href="https://linkedin.com/in/saqlain-danish" target="_blank" class="footer-link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast"
+    class="pointer-events-none fixed bottom-6 left-1/2 z-[80] hidden -translate-x-1/2 rounded-2xl border border-emerald-400/30 bg-emerald-500/15 px-5 py-3 text-sm font-semibold text-emerald-700 shadow-2xl shadow-emerald-500/20 backdrop-blur dark:text-emerald-200">
+    Message ready. Connect a backend to send it.
+  </div>
+</body>
+
+</html>
